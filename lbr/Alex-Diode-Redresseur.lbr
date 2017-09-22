@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -108,9 +108,28 @@ Référence Farnell : 1861528
 <text x="-3.175" y="-17.145" size="1.27" layer="25" rot="R90">&gt;Name</text>
 <text x="-3.175" y="-4.445" size="1.27" layer="25" rot="R90">&gt;Value</text>
 </package>
+<package name="GB6J">
+<pad name="VCC" x="0" y="0" drill="1" diameter="2" shape="square"/>
+<pad name="ALT1" x="0" y="-5.33" drill="1" diameter="2"/>
+<pad name="ALT2" x="0" y="-10.66" drill="1" diameter="2"/>
+<pad name="GND" x="0" y="-15.99" drill="1" diameter="2"/>
+<wire x1="-2" y1="2" x2="1" y2="2" width="0.127" layer="21"/>
+<wire x1="1" y1="2" x2="1" y2="-1" width="0.127" layer="21"/>
+<wire x1="1" y1="-1" x2="1" y2="-18" width="0.127" layer="21"/>
+<wire x1="1" y1="-18" x2="-2" y2="-18" width="0.127" layer="21"/>
+<wire x1="-2" y1="-18" x2="-2" y2="-1" width="0.127" layer="21"/>
+<wire x1="-2" y1="-1" x2="-2" y2="2" width="0.127" layer="21"/>
+<wire x1="-2" y1="-1" x2="1" y2="-1" width="0.127" layer="21"/>
+<text x="4.5" y="-18" size="1.27" layer="25" rot="R90">&gt;Name</text>
+<text x="2.5" y="-18" size="1.27" layer="27" rot="R90">&gt;Value</text>
+<text x="-2.5" y="-1" size="1" layer="51" rot="R90">(+)</text>
+<text x="-2.5" y="-17" size="1" layer="51" rot="R90">(-)</text>
+<text x="-2.5" y="-11" size="1" layer="51" rot="R90">~</text>
+<text x="-2.5" y="-5.5" size="1" layer="51" rot="R90">~</text>
+</package>
 </packages>
 <symbols>
-<symbol name="VISIB-4A">
+<symbol name="GRAETZ">
 <pin name="ALT1" x="-7.62" y="2.54" visible="off" length="short"/>
 <pin name="ALT2" x="-7.62" y="-2.54" visible="off" length="short"/>
 <pin name="GND" x="5.08" y="-2.54" visible="off" length="short" rot="R180"/>
@@ -131,7 +150,7 @@ Référence Farnell : 1861528
 <devicesets>
 <deviceset name="VISIB-4A" prefix="D">
 <gates>
-<gate name="G$1" symbol="VISIB-4A" x="0" y="0"/>
+<gate name="G$1" symbol="GRAETZ" x="0" y="0"/>
 </gates>
 <devices>
 <device name="VISIB" package="VISIB-4A">
@@ -146,6 +165,24 @@ Référence Farnell : 1861528
 </technologies>
 </device>
 <device name="VISIB-D" package="VISIB-4A-D">
+<connects>
+<connect gate="G$1" pin="ALT1" pad="ALT1"/>
+<connect gate="G$1" pin="ALT2" pad="ALT2"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GB6J" prefix="D">
+<gates>
+<gate name="G$1" symbol="GRAETZ" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GB6J">
 <connects>
 <connect gate="G$1" pin="ALT1" pad="ALT1"/>
 <connect gate="G$1" pin="ALT2" pad="ALT2"/>

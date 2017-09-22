@@ -67,7 +67,8 @@
 <text x="-8.89" y="-0.635" size="1" layer="25">&gt;Name</text>
 </package>
 <package name="CON-TRAV-1">
-<pad name="PIN1" x="0" y="0" drill="0.8" diameter="1.2"/>
+<description>&lt;p&gt;&lt;b&gt;Drill conducteur :&lt;/b&gt; 0.8&lt;/p&gt;</description>
+<pad name="PIN1" x="0" y="0" drill="0.8" diameter="1.4"/>
 </package>
 <package name="CON-FILTRAVERSANT-T2">
 <description>&lt;p&gt;
