@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -105,6 +105,32 @@ Tension : 30 VDC
 <text x="-3" y="-3" size="1" layer="21" rot="R90">&gt;Name</text>
 <text x="-4" y="-3" size="1" layer="21" rot="R90">&gt;Value</text>
 </package>
+<package name="MC33153-RADIAL">
+<description>&lt;h1&gt;MC36253&lt;/h1&gt;
+&lt;h2&gt;Polyswitch&lt;/h2&gt;
+&lt;p&gt;
+Farnell : 1861154&lt;br /&gt;
+Courant de maintient : 2.5A
+Coutant de déclenchement : 5A
+Tension : 30 VDC
+&lt;/p</description>
+<pad name="1" x="-2.55" y="0" drill="0.8" diameter="1.6"/>
+<pad name="2" x="2.55" y="0" drill="0.8" diameter="1.6"/>
+<wire x1="-2.775" y1="1" x2="0.5" y2="1" width="0.127" layer="21"/>
+<wire x1="0.5" y1="1" x2="2.775" y2="1" width="0.127" layer="21"/>
+<wire x1="-2.775" y1="-1" x2="-0.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-1" x2="2.775" y2="-1" width="0.127" layer="21"/>
+<wire x1="-2.775" y1="-1" x2="-2.775" y2="1" width="0.127" layer="21" curve="-180"/>
+<wire x1="2.775" y1="1" x2="2.775" y2="-1" width="0.127" layer="21" curve="-180"/>
+<wire x1="-2.775" y1="1.5" x2="0" y2="1.5" width="0.127" layer="21"/>
+<wire x1="0" y1="1.5" x2="0.5" y2="1" width="0.127" layer="21"/>
+<wire x1="2.775" y1="-1.5" x2="0" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.5" x2="-0.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="-2.775" y1="1.5" x2="-2.775" y2="1" width="0.127" layer="21"/>
+<wire x1="2.775" y1="-1" x2="2.775" y2="-1.5" width="0.127" layer="21"/>
+<text x="-4.275" y="-3" size="1" layer="21" rot="R90">&gt;Name</text>
+<text x="-5.275" y="-3" size="1" layer="21" rot="R90">&gt;Value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="POLYSWITCH">
@@ -136,6 +162,15 @@ Tension : 30 VDC
 </technologies>
 </device>
 <device name="MC36-RADIAL" package="MC36253-RADIAL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="MC33153-RADIAL">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
